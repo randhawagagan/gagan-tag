@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from "lit-html";
+      import "../gagan-tag.js";
+
+      const title = "This is a web component created using LIT";
+      render(
+        html`
+          <gagan-tag .title=${title}>
+            some more light-dom
+          </gagan-tag>
+        `,
+        document.querySelector("#demo")
+      );
+    </script>
+  </body>
+</html>
